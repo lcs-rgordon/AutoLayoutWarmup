@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,28 +19,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYs-FJ-IX3" userLabel="Black View">
-                                <rect key="frame" x="0.0" y="322" width="377" height="345"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYs-FJ-IX3" userLabel="Black View">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50I-WN-l7W" userLabel="Red View">
-                                <rect key="frame" x="0.0" y="0.0" width="124" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50I-WN-l7W" userLabel="Red View">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="333.5"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-6T-ymn" userLabel="Blue View">
-                                <rect key="frame" x="246" y="0.0" width="129" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-6T-ymn" userLabel="Blue View">
+                                <rect key="frame" x="250" y="0.0" width="125" height="333.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbU-a2-fdY" userLabel="Green View">
-                                <rect key="frame" x="124" y="0.0" width="125" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbU-a2-fdY" userLabel="Green View">
+                                <rect key="frame" x="125" y="0.0" width="125" height="333.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VbU-a2-fdY" firstAttribute="bottom" secondItem="EYs-FJ-IX3" secondAttribute="top" id="00F-M0-Afd"/>
+                            <constraint firstItem="50I-WN-l7W" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="1gh-Mp-W25"/>
+                            <constraint firstItem="ybx-6T-ymn" firstAttribute="width" secondItem="50I-WN-l7W" secondAttribute="width" id="Hmc-Nf-aFo"/>
+                            <constraint firstItem="ybx-6T-ymn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Inw-DF-Ilt"/>
+                            <constraint firstItem="50I-WN-l7W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Je4-Pz-cjr"/>
+                            <constraint firstItem="VbU-a2-fdY" firstAttribute="width" secondItem="50I-WN-l7W" secondAttribute="width" id="PeM-fw-FJZ"/>
+                            <constraint firstItem="50I-WN-l7W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RoI-nq-QRz"/>
+                            <constraint firstItem="EYs-FJ-IX3" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Tzw-JX-ihg"/>
+                            <constraint firstItem="ybx-6T-ymn" firstAttribute="top" secondItem="50I-WN-l7W" secondAttribute="top" id="UE5-Jz-cjF"/>
+                            <constraint firstItem="ybx-6T-ymn" firstAttribute="height" secondItem="50I-WN-l7W" secondAttribute="height" id="WcG-Su-Xsm"/>
+                            <constraint firstItem="EYs-FJ-IX3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="act-Fm-4vS"/>
+                            <constraint firstItem="VbU-a2-fdY" firstAttribute="height" secondItem="50I-WN-l7W" secondAttribute="height" id="eeW-9i-wJp"/>
+                            <constraint firstItem="VbU-a2-fdY" firstAttribute="leading" secondItem="50I-WN-l7W" secondAttribute="trailing" id="fxg-4c-7x8"/>
+                            <constraint firstItem="EYs-FJ-IX3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iFV-bc-xx2"/>
+                            <constraint firstItem="EYs-FJ-IX3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="wWc-It-OxT"/>
+                            <constraint firstItem="50I-WN-l7W" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="xaI-a5-oGE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
